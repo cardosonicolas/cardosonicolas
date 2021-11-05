@@ -4,8 +4,8 @@ import Navbar from "../components/Navbar.js";
 const IndexPage = () => {
   return (
     <main>
-      <Navbar></Navbar>
       <title>Cardoso Nicolás - Web Developer</title>
+      <Navbar></Navbar>
     </main>
   );
 };
