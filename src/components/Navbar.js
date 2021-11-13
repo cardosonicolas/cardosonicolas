@@ -6,58 +6,57 @@ import {
   IconButton,
   Link,
   useDisclosure,
-  useColorModeValue,
-  useColorMode,
   Stack,
+  Text,
 } from "@chakra-ui/react";
-
-import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import ThemeTogglerButton from "./ThemeTogglerButton";
 
 const Links = ["About", "Portfolio", "Skills", "Contact"];
 
-const NavLink = ({ children }) => (
-  <Link
-    p={2}
-    _hover={{
-      textDecoration: "none",
-    }}
-    href={`#${children}`}
-  >
-    {children}
-  </Link>
-);
+const NavLink = ({ children }) => {
+  return (
+    <Link
+      p={2}
+      _hover={{
+        textDecoration: "none",
+      }}
+      href={`#${children}`}
+    >
+      {children}
+    </Link>
+  );
+};
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { colorMode, toggleColorMode } = useColorMode();
+  const icon = isOpen ? <CloseIcon /> : <HamburgerIcon />;
 
   return (
     <>
-      <Box bg={useColorModeValue("blue.50", "blue.900")} p={"1em"}>
+      <Box p={"1em"}>
         <Flex
           alignItems={"center"}
           justifyContent={"space-between"}
-          maxW={"1200px"}
+          maxW={"container.md"}
           margin={"auto"}
         >
           <IconButton
             size={"md"}
             bg={"inherit"}
-            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+            icon={icon}
             display={{ md: "none" }}
             onClick={isOpen ? onClose : onOpen}
           />
-          <Box>{"<Nicolás />"}</Box>
-
+          <Text fontWeight="extrabold" fontSize="md">
+            {"<Nicolás />"}
+          </Text>
           <HStack as={"nav"} spacing={4} display={{ base: "none", md: "flex" }}>
             {Links.map((link) => (
               <NavLink key={link}>{link}</NavLink>
             ))}
           </HStack>
-
-          <IconButton onClick={toggleColorMode} bg={"inherit"}>
-            {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-          </IconButton>
+          <ThemeTogglerButton />
         </Flex>
 
         {isOpen ? (

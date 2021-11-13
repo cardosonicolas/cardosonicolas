@@ -1,13 +1,16 @@
 import * as React from "react";
 import Navbar from "../components/Navbar.js";
+import { ChakraProvider } from "@chakra-ui/react";
+import theme from "../chakra-ui-gatsby-plugin/theme";
 
-const IndexPage = () => {
+const Home = () => {
   return (
-    <main>
+    <ChakraProvider theme={theme}>
       <title>Cardoso Nicolás - Web Developer</title>
+
       <Navbar></Navbar>
-    </main>
+    </ChakraProvider>
   );
 };
 
-export default IndexPage;
+export default Home;
