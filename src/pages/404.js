@@ -1,26 +1,17 @@
 import * as React from "react";
 import { Link } from "gatsby";
 
-import {
-  Box,
-  Heading,
-  Text,
-  Container,
-  Divider,
-  Button,
-} from "@chakra-ui/react";
+import { Box, Container, Button, Image } from "@chakra-ui/react";
+import notFound from "../images/404.png";
 
 const NotFoundPage = () => {
   return (
     <main>
-      <Container p={"1em"}>
-        <Heading as="h1">Not found</Heading>
-        <Text>The page you&apos;re looking for was not found.</Text>
-        <Divider my={6} />
-
+      <Container p={"3em"}>
+        <Image src={notFound} />
         <Box my={6} align="center">
           <Link to="/">
-            <Button to="/" colorScheme="teal">
+            <Button to="/" colorScheme="green">
               Go home
             </Button>
           </Link>
