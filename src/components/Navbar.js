@@ -1,5 +1,6 @@
 import * as React from "react";
 import {
+  Container,
   Box,
   Flex,
   HStack,
@@ -12,14 +13,17 @@ import {
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import ThemeTogglerButton from "./ThemeTogglerButton";
 
-const Links = ["About", "Portfolio", "Skills", "Contact"];
+const Links = ["About me", "Projects", "Contact"];
 
 const NavLink = ({ children }) => {
   return (
     <Link
-      p={2}
+      px={2}
+      py={1}
+      rounded={"md"}
       _hover={{
         textDecoration: "none",
+        color: "green.400",
       }}
       href={`#${children}`}
     >
@@ -29,46 +33,53 @@ const NavLink = ({ children }) => {
 };
 
 const Navbar = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen, onToggle } = useDisclosure();
   const icon = isOpen ? <CloseIcon /> : <HamburgerIcon />;
 
   return (
     <>
-      <Box p={"1em"}>
+      <Container
+        shadow="sm"
+        maxW="full"
+        py="0.5em"
+        borderTopWidth={5}
+        borderStyle="solid"
+        borderColor="green.400"
+        zIndex="1"
+      >
         <Flex
-          alignItems={"center"}
-          justifyContent={"space-between"}
-          maxW={"container.md"}
-          margin={"auto"}
+          alignItems="center"
+          justifyContent="space-between"
+          margin="auto"
+          maxW="container.xl"
         >
           <IconButton
-            size={"md"}
-            bg={"inherit"}
+            size="md"
+            bg="inherit"
             icon={icon}
             display={{ md: "none" }}
-            onClick={isOpen ? onClose : onOpen}
+            onClick={onToggle}
           />
-          <Text fontWeight="extrabold" fontSize="md">
-            {"<Nicolás />"}
-          </Text>
-          <HStack as={"nav"} spacing={4} display={{ base: "none", md: "flex" }}>
+          <Text fontSize="md">{"Cardoso Nicolas"}</Text>
+          <HStack as="nav" spacing={4} display={{ base: "none", md: "flex" }}>
             {Links.map((link) => (
               <NavLink key={link}>{link}</NavLink>
             ))}
           </HStack>
+
           <ThemeTogglerButton />
         </Flex>
 
         {isOpen ? (
           <Box pt={4} display={{ md: "none" }}>
-            <Stack as={"nav"} spacing={"4"}>
+            <Stack as="nav" spacing="4">
               {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
               ))}
             </Stack>
           </Box>
         ) : null}
-      </Box>
+      </Container>
     </>
   );
 };

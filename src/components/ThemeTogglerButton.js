@@ -5,7 +5,7 @@ import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 const ThemeTogglerButton = () => {
   const { toggleColorMode } = useColorMode();
-  const icon = useColorModeValue(<MoonIcon />, <SunIcon />);
+  const icon = useColorModeValue(<MoonIcon color="gray.500" />, <SunIcon />);
 
   return (
     <AnimatePresence exitBeforeEnter initial={false}>
