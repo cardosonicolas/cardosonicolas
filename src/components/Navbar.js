@@ -9,6 +9,7 @@ import {
   useDisclosure,
   Stack,
   Text,
+  Fade,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import ThemeTogglerButton from "./ThemeTogglerButton";
@@ -71,13 +72,15 @@ const Navbar = () => {
         </Flex>
 
         {isOpen ? (
-          <Box pt={4} display={{ md: "none" }}>
-            <Stack as="nav" spacing="4">
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
-            </Stack>
-          </Box>
+          <Fade in={isOpen} unmountOnExit>
+            <Box pt={4} display={{ md: "none" }}>
+              <Stack as="nav" spacing="4">
+                {Links.map((link) => (
+                  <NavLink key={link}>{link}</NavLink>
+                ))}
+              </Stack>
+            </Box>
+          </Fade>
         ) : null}
       </Container>
     </>

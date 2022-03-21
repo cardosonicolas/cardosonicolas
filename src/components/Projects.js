@@ -101,21 +101,16 @@ const Projects = () => {
               linkDeploy,
               id,
             }) => (
-              <Link
-                href={linkDeploy}
-                target="_blank"
+              <Card
                 key={id}
-                _hover={{ textDecor: "none" }}
-              >
-                <Card
-                  title={title}
-                  tecnology={tecnology}
-                  linkDesing={linkDesing}
-                  linkRepo={linkRepo}
-                  image={image}
-                  desing={desing}
-                />
-              </Link>
+                title={title}
+                tecnology={tecnology}
+                linkDesing={linkDesing}
+                linkRepo={linkRepo}
+                image={image}
+                desing={desing}
+                linkDeploy={linkDeploy}
+              />
             )
           )}
       </Grid>

@@ -30,7 +30,7 @@ const Footer = () => {
               w="6"
               h="6"
               fill="green.400"
-              _hover={{ fill: "green.200" }}
+              _hover={{ fill: "green.200", transition: "fill 0.2s ease-out" }}
             />
           </Link>
           <Link href="https://github.com/cardosonicolas" target="_blank">
@@ -39,7 +39,7 @@ const Footer = () => {
               w="6"
               h="6"
               fill="green.400"
-              _hover={{ fill: "green.200" }}
+              _hover={{ fill: "green.200", transition: "fill 0.2s ease-out" }}
             />
           </Link>
         </HStack>
