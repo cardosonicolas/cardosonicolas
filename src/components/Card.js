@@ -47,7 +47,7 @@ const Card = ({
           <Text>{tecnology}</Text>
         </VStack>
 
-        <HStack fontSize="sm" color="gray.600">
+        <HStack fontSize="sm">
           <Text fontWeight="bold">Designed by:</Text>
           <Link href={linkDesing} target="_blank">
             {desing}
@@ -61,14 +61,7 @@ const Card = ({
             pt="1em"
             _hover={{ textDecor: "none" }}
           >
-            <Button
-              leftIcon={<SiNetlify />}
-              bg="green.300"
-              color="white"
-              _hover={{
-                bg: "green.200",
-              }}
-            >
+            <Button leftIcon={<SiNetlify />} colorScheme="green">
               Demo
             </Button>
           </Link>
@@ -78,14 +71,7 @@ const Card = ({
             pt="1em"
             _hover={{ textDecor: "none" }}
           >
-            <Button
-              leftIcon={<FaGithub />}
-              bg="green.300"
-              color="white"
-              _hover={{
-                bg: "green.200",
-              }}
-            >
+            <Button leftIcon={<FaGithub />} colorScheme="green">
               Code
             </Button>
           </Link>

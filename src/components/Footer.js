@@ -29,8 +29,8 @@ const Footer = () => {
               as={FaLinkedin}
               w="6"
               h="6"
-              fill="green.400"
-              _hover={{ fill: "green.200", transition: "fill 0.2s ease-out" }}
+              fill="green.500"
+              _hover={{ fill: "green.600", transition: "fill 0.2s ease-out" }}
             />
           </Link>
           <Link href="https://github.com/cardosonicolas" target="_blank">
@@ -38,8 +38,8 @@ const Footer = () => {
               as={FaGithub}
               w="6"
               h="6"
-              fill="green.400"
-              _hover={{ fill: "green.200", transition: "fill 0.2s ease-out" }}
+              fill="green.500"
+              _hover={{ fill: "green.600", transition: "fill 0.2s ease-out" }}
             />
           </Link>
         </HStack>

@@ -114,7 +114,12 @@ const Projects = () => {
             )
           )}
       </Grid>
-      <Link onClick={onToggle} fontSize="2xl" textDecor="underline">
+      <Link
+        onClick={onToggle}
+        fontSize="2xl"
+        textDecor="underline"
+        _hover={{ color: "green.400" }}
+      >
         See {isOpen ? "less" : "more"}
       </Link>
     </Box>
