@@ -33,7 +33,7 @@ const Hero = () => {
           target="_blank"
           _hover={{ textDecor: "none" }}
         >
-          <Button bg="green.300" shadow="md" color="white" colorScheme="green">
+          <Button shadow="md" colorScheme="green">
             My resume
           </Button>
         </Link>
