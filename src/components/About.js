@@ -19,7 +19,7 @@ const About = () => {
         textAlign={{ base: "center", md: "start" }}
         alignItems="center"
       >
-        <Box w="100%" pr="1em" display={{ base: "none", md: "initial" }}>
+        <Box w="100%" pr="3em" display={{ base: "none", md: "initial" }}>
           <Image src={note} />
         </Box>
         <Box>

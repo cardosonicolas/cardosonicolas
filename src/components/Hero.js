@@ -26,7 +26,7 @@ const Hero = () => {
           Nice to meet you.
         </Heading>
         <Text fontSize="2xl" pb="0.5em">
-          I'm a trainee web developer based in Entre Ríos, Argentina.
+          I'm a frontend developer based in Entre Ríos, Argentina.
         </Text>
         <Link
           href="https://drive.google.com/file/d/1IGzZ6NfEMi0S-4P7g7xGaCZc4ZOgxW6v/view?usp=sharing"

@@ -61,7 +61,7 @@ const Navbar = () => {
             display={{ md: "none" }}
             onClick={onToggle}
           />
-          <Text fontSize="md">{"Cardoso Nicolas"}</Text>
+          <Text fontSize="md">{"Cardoso Nicolás"}</Text>
           <HStack as="nav" spacing={4} display={{ base: "none", md: "flex" }}>
             {Links.map((link) => (
               <NavLink key={link}>{link}</NavLink>
