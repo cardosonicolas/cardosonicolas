@@ -8,7 +8,7 @@ import {
   Image,
   Link,
 } from "@chakra-ui/react";
-import developer from "../images/developer.png";
+import developer from "../images/developer2.png";
 
 const Hero = () => {
   return (
