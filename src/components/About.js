@@ -4,7 +4,7 @@ import note from "../images/note.png";
 
 const About = () => {
   return (
-    <Box pt="5em" id="About me" >
+    <Box pt="5em" id="About me">
       <Heading
         as="h2"
         fontWeight="normal"

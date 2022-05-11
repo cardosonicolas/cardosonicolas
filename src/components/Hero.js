@@ -29,7 +29,7 @@ const Hero = () => {
           I'm a frontend developer based in Entre Ríos, Argentina.
         </Text>
         <Link
-          href="https://drive.google.com/file/d/1IGzZ6NfEMi0S-4P7g7xGaCZc4ZOgxW6v/view?usp=sharing"
+          href="https://drive.google.com/file/d/18q7dMuPKftPdxBYXyJ_SBwlE--U4L4yK/view"
           target="_blank"
           _hover={{ textDecor: "none" }}
         >
