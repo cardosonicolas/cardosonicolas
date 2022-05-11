@@ -4,13 +4,14 @@ import note from "../images/note.png";
 
 const About = () => {
   return (
-    <Box pt="5em" id="About me">
+    <Box pt="5em">
       <Heading
         as="h2"
         fontWeight="normal"
         fontSize="4xl"
         pb="1em"
         textAlign="center"
+        id="About me"
       >
         About me
       </Heading>
@@ -18,21 +19,22 @@ const About = () => {
         flexDirection={{ base: "column", md: "row" }}
         textAlign={{ base: "center", md: "start" }}
         alignItems="center"
+        justifyContent={"space-between"}
       >
-        <Box w="100%" pr="3em" display={{ base: "none", md: "initial" }}>
+        <Box display={{ base: "none", md: "initial" }}>
           <Image src={note} />
         </Box>
-        <Box>
-          <Text fontSize="2xl">
+        <Box fontSize="2xl" pl={{ md: "2em" }} w={{ md: "60%" }}>
+          <Text>
             I am passionate about web application development. I am currently
             self-taught using the React ecosystem for personal projects.
           </Text>
-          <Text fontSize="2xl">
+          <Text>
             <br />
             My goal is to be part of a work team that allows me to develop
             professionally. <br />
           </Text>
-          <Text fontSize="2xl" display={{ base: "none", md: "initial" }}>
+          <Text display={{ base: "none", md: "initial" }}>
             <br />
             When I'm not studying, I like to ride my bike with my group of
             friends.

@@ -73,8 +73,9 @@ const Projects = () => {
   let counting = isOpen ? cards.length : 3;
 
   return (
-    <Box pt="5em" textAlign="center" id="Projects">
+    <Box pt="5em" textAlign="center">
       <Heading
+        id="Projects"
         as="h2"
         fontWeight="normal"
         fontSize="4xl"

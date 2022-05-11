@@ -16,6 +16,8 @@ const Hero = () => {
       flexDirection={{ base: "column", md: "row" }}
       textAlign={{ base: "center", md: "start" }}
       alignItems="center"
+      justifyContent={"space-between"}
+      h={{ md: "90vh" }}
     >
       <Box>
         <Heading as="h1" fontSize="4xl">
@@ -38,9 +40,7 @@ const Hero = () => {
           </Button>
         </Link>
       </Box>
-      <Box display={{ base: "none", md: "initial" }} p="2em">
-        <Image src={developer} />
-      </Box>
+      <Image src={developer} display={{ base: "none", md: "initial" }} />
     </Flex>
   );
 };
