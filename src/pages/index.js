@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ChakraProvider, Spinner, Center } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import { Helmet } from "react-helmet";
 import theme from "../chakra-ui-gatsby-plugin/theme";
 import MySpinner from "../components/MySpinner";

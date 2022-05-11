@@ -8,7 +8,7 @@ import {
   Image,
   Link,
 } from "@chakra-ui/react";
-import developer from "../images/developer2.png";
+import developer from "../images/developer3.png";
 
 const Hero = () => {
   return (
@@ -38,7 +38,7 @@ const Hero = () => {
           </Button>
         </Link>
       </Box>
-      <Box display={{ base: "none", md: "initial" }}>
+      <Box display={{ base: "none", md: "initial" }} p="2em">
         <Image src={developer} />
       </Box>
     </Flex>
