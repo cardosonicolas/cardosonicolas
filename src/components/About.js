@@ -4,7 +4,7 @@ import note from "../images/note.png";
 
 const About = () => {
   return (
-    <Box pt="5em">
+    <Box py={{ base: "5em", md: "0em" }} pb={{ base: "0em", md: "5em" }}>
       <Heading
         as="h2"
         fontWeight="normal"
@@ -26,7 +26,7 @@ const About = () => {
         </Box>
         <Box fontSize="2xl" pl={{ md: "2em" }} w={{ md: "60%" }}>
           <Text>
-            I am passionate about web application development. I am currently
+            I am passionate about web application development. Right now I'm
             self-taught using the React ecosystem for personal projects.
           </Text>
           <Text>
