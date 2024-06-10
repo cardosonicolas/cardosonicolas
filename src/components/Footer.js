@@ -19,7 +19,7 @@ const Footer = () => {
         maxW="container.md"
         margin="auto"
       >
-        <Text>Cardoso Nicolás - 2022</Text>
+        <Text>Cardoso Nicolás - 2024</Text>
         <HStack>
           <Link
             href="https://www.linkedin.com/in/cardosonicolas/"
