@@ -8,7 +8,7 @@ const ThemeTogglerButton = () => {
   const icon = useColorModeValue(<MoonIcon color="gray.500" />, <SunIcon />);
 
   return (
-    <AnimatePresence exitBeforeEnter initial={false}>
+    <AnimatePresence mode="wait" initial={false}>
       <motion.div
         key={useColorModeValue("light", "dark")}
         initial={{ x: -20, opacity: 0 }}
